@@ -1,3 +1,33 @@
+.conteiner {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .conteiner {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conteiner {
+      max-width: 1200px;
+      padding: 0 15px;
+      
+      align-items: center;
+      display: block;
+  }
+}
+    
+
 // .container {
 //   width: 1200px;
 //   padding: 0 15px;

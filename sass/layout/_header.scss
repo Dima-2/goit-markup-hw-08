@@ -1,25 +1,27 @@
 .header {
   padding-top: 25px;
   padding-bottom: 24px;
+}
 
-  .logo-& {
-    margin-right: 93px;
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--secondary-color);
-    text-decoration: none;
+.logo-header {
+  margin-right: 93px;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--accent-color);
   }
 }
 
-.logo-header:focus,
-.logo-header:hover {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--accent-color);
-}
+
 
 .navigation {
   display: flex;
