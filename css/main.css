@@ -52,11 +52,14 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .conteiner {
   width: 100%;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -77,8 +80,35 @@ img {
   .conteiner {
     max-width: 1200px;
     padding: 0 15px;
-    align-items: center;
-    display: block;
+  }
+}
+
+.conteiner-footer {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .conteiner-footer {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner-footer {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conteiner-footer {
+    max-width: 1200px;
+    padding: 0 15px;
   }
 }
 
@@ -428,6 +458,7 @@ img {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Studio/hero-mobail.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+  margin-bottom: 60px;
 }
 
 .hero-title {
@@ -513,12 +544,11 @@ img {
 }
 
 .skills-list {
-  display: flex;
-  margin-bottom: 94px;
+  margin-bottom: 60px;
 }
 
 .skills-list-item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .skills-list-item::before {
@@ -549,9 +579,8 @@ img {
 }
 
 .title {
-  width: 270px;
-  height: 16px;
   margin-bottom: 10px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -561,8 +590,6 @@ img {
 }
 
 .text {
-  width: 270px;
-  height: 75px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -618,14 +645,17 @@ img {
 
 .team {
   background: #F5F4FA;
-  margin-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .social-list {
   display: flex;
-  width: 206px;
-  height: 44px;
+  max-width: 206px;
+  max-height: 44px;
   margin: auto;
+  margin-bottom: 24px;
 }
 
 .social-list-link {
@@ -653,27 +683,47 @@ img {
 }
 
 .social-list-icon {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
   fill: #AFB1B8;
 }
 
+.team-list {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-list-item {
+  max-width: 450px;
+  display: inline-block;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.command-list-img {
+  margin-bottom: 30px;
+}
+
 .team-title {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
 }
 
 .item-title {
-  margin-top: 30px;
   margin-bottom: 10px;
-  min-width: 151px;
-  height: 19px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -683,9 +733,6 @@ img {
 
 .position {
   margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 130px;
   height: 19px;
   font-weight: 400;
   font-size: 16px;
@@ -694,28 +741,10 @@ img {
   color: var(--main-color);
 }
 
-.team-list {
-  display: flex;
-  text-align: center;
-  padding-bottom: 94px;
-}
-
-.team-list-item {
-  width: 270px;
-  height: 428px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .regular-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
@@ -726,18 +755,19 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 94px;
+  flex-wrap: wrap;
 }
 
 .regular-list-item {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border: 1px solid #AFB1B8;
   box-sizing: border-box;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .regular-list-item:hover, .regular-list-item:focus {
@@ -758,7 +788,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   fill: #AFB1B8;
 }
@@ -773,7 +803,6 @@ img {
   background-color: #2F303A;
   display: block;
   width: auto;
-  height: 252px;
 }
 
 .logo-footer {
@@ -791,9 +820,8 @@ img {
   color: #FFFFFF;
 }
 
-.footer-address {
-  width: 231px;
-  height: 81px;
+.footer-address-list {
+  margin-bottom: 60px;
 }
 
 .footer-address-list-navigation {
@@ -821,7 +849,6 @@ img {
 }
 
 .footer-address-list-tel {
-  width: 231px;
   margin-bottom: 30px;
   font-style: normal;
   font-weight: 400;
@@ -830,10 +857,6 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-address-container {
-  display: inline-block;
 }
 
 .social-title {
@@ -847,11 +870,7 @@ img {
 }
 
 .container-social {
-  width: 206px;
-  height: 80px;
   display: inline-block;
-  margin-left: 70px;
-  margin-top: 75px;
 }
 
 .icon-footer {
@@ -863,6 +882,7 @@ img {
 .social-list-footer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .social-list-footer-link {
@@ -873,6 +893,7 @@ img {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 .social-list-footer-link:hover, .social-list-footer-link:focus {
@@ -882,15 +903,8 @@ img {
   cursor: pointer;
 }
 
-.subscription {
-  width: 570px;
-  height: 86px;
-  margin-left: 93px;
-  margin-top: 72px;
-}
-
-.subscription-title {
-  display: inline-block;
+.title {
+  display: block;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -900,9 +914,10 @@ img {
   color: #FFFFFF;
 }
 
-.subscription-input {
+.input {
   padding-left: 16px;
   margin-right: 12px;
+  margin-bottom: 20px;
   width: 358px;
   height: 50px;
   background-color: #2F303A;
@@ -913,9 +928,8 @@ img {
   color: #FFFFFF;
 }
 
-.subscription-button {
+.button {
   border: none;
-  margin-left: -4px;
   width: 200px;
   height: 50px;
   background-color: #2196F3;
@@ -925,7 +939,7 @@ img {
 }
 
 .button-text {
-  margin-left: 24px;
+  margin-left: 15px;
   font-weight: 700px;
   font-size: 16px;
   line-height: 1.87;
@@ -942,9 +956,9 @@ img {
   height: 24px;
   width: 24px;
   margin-left: 10px;
+  background-image: url("../images/icon/icon-send.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../images/icon/icon-send.svg");
 }
 
 .subscription-button-text {

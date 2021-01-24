@@ -1,9 +1,10 @@
 .skills-list {
-  display: flex;
-  margin-bottom: 94px;
+  // display: flex;
+  margin-bottom: 60px;
+  
 
   &-item:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
 
   &-item::before {
@@ -35,10 +36,8 @@
 }
 
 .title {
-  width: 270px;
-  height: 16px;
   margin-bottom: 10px;
-
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -48,10 +47,7 @@
 }
 
 .text {
-  width: 270px;
-  height: 75px;
-
-  font-weight: 400;
+ font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
